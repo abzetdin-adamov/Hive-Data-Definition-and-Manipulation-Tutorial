@@ -6,6 +6,7 @@ wget https://site.ada.edu.az/~aadamov/sources/data/Salaries.csv
 2. To use Hive the interpretor should start typing hive
  
 Default location of Hive data is `/user/hive/warehouse`
+To run system commands from Hive put "!" as prefix of command. Example: 'hive>!ls /home/hadoop' or '/ hive>!hdfs dfs -ls /'
 
 3. To see the list of available databases
 ```
