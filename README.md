@@ -21,7 +21,7 @@ hdfs dfs -ls /user/hive/warehouse/
 ```
 5. To activate specific databse
 ```
-USE mydb
+USE mydb;
 ```
 6. To create new table associated with active database
 ```
@@ -48,9 +48,9 @@ hdfs dfs -ls /user/hive/warehouse/mydb.db/salaries
 ```
 8. Now to retries a data from Hive table "salaries"
 ```
-SELECT * FROM salaries LIMIT 10
+SELECT * FROM salaries LIMIT 10;
 ```
 9. To initiate MapReduce job associated with Hive query 
 ```
-SELECT COUNT(*) FROM salaries
+SELECT COUNT(*) FROM salaries;
 ```
