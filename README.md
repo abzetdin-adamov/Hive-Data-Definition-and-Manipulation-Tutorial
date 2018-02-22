@@ -5,7 +5,7 @@ wget https://site.ada.edu.az/~aadamov/sources/data/Salaries.csv
 ```
 2. To use Hive the interpretor should start typing hive
  
-Default location of Hive data is `/user/hive/warehouse`
+Default location of Hive data is `/user/hive/warehouse` (Hive's warehouse directory)
 To run system commands from Hive put "!" as prefix of command. Example: `hive>!ls /home/hadoop` or `/ hive>!hdfs dfs -ls /`
 
 3. To see the list of available databases
@@ -38,6 +38,10 @@ TBLPROPERTIES("skip.header.line.count"="1");
 as a result of this command appropriate metadata added to Metastore and new directory "salaries" will be created within database directory "mydb.db". Some important properties of the new table are defined: columns are delimited by comma. File is stored as a textual file (Hive supports following four file-types to store data TEXTFILE, SEQUENCEFILE, ORC and RCFILE). Specific property of table set to skip first row of data-file which consists of column names.
 ```
 hdfs dfs -ls /user/hive/warehouse/mydb.db
+```
+7. To verify the structure of table
+```
+DESCRIBE salaries;
 ```
 7. To load data from "Salaries.csv" file that located in local file system into newly created "salaries" table
 ```
