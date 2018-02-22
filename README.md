@@ -35,7 +35,7 @@ sex STRING,
 salary DOUBLE) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE 
 TBLPROPERTIES("skip.header.line.count"="1");
 ```
-as a result of this command appropriate metadata added to Metastore and new directory "salaries" will be created within database directory "mydb.db"
+as a result of this command appropriate metadata added to Metastore and new directory "salaries" will be created within database directory "mydb.db". Some important properties of the new table are defined: columns are delimited by comma. File is stored as a textual file (Hive supports following four file-types to store data TEXTFILE, SEQUENCEFILE, ORC and RCFILE). Specific property of table set to skip first row of data-file which consists of column names.
 ```
 hdfs dfs -ls /user/hive/warehouse/mydb.db
 ```
